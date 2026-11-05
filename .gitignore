@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.cache/
+data/
+.env
+.env.json
+raffle-bot.config.json
+*.tsbuildinfo
+.DS_Store

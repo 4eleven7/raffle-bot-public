@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["valuations"],
+  "properties": {
+    "valuations": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "retailValue", "confidence", "notes"],
+        "properties": {
+          "id": { "type": "string" },
+          "retailValue": { "type": ["number", "null"] },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 160
+          }
+        }
+      }
+    }
+  }
+}

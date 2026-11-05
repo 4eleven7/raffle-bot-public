@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "reason", "issues"],
+  "properties": {
+    "decision": {
+      "type": "string",
+      "enum": ["approve", "reject", "uncertain"]
+    },
+    "reason": {
+      "type": "string",
+      "maxLength": 800
+    },
+    "issues": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "maxLength": 160
+      }
+    }
+  }
+}

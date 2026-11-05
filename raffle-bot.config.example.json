@@ -1,0 +1,73 @@
+{
+  "monitor": {
+    "sourceMonitoring": {
+      "enabled": false,
+      "trials": {}
+    },
+    "defaultIntervalMs": 3600000,
+    "scanConcurrency": 6,
+    "scanRetries": 2,
+    "scanRetryBaseDelayMs": 750,
+    "scanTimeoutMs": 90000,
+    "browserScanConcurrency": 1,
+    "browserIntervalMultiplier": 2,
+    "siteIntervalMultipliers": {
+      "example-heavy-site": 3
+    },
+    "siteMinIntervalsMs": {
+      "example-heavy-site": 7200000
+    },
+    "heartbeatIntervalMs": 60000,
+    "heartbeatStaleMs": 300000
+  },
+  "storage": {
+    "snapshotRetentionMs": 2592000000,
+    "snapshotMaintenanceIntervalMs": 3600000,
+    "snapshotPruneBatchSize": 25000,
+    "snapshotPruneMaxBatches": 4
+  },
+  "alerts": {
+    "notificationWindowMs": 3600000,
+    "buyMinWinProbability": 0.65,
+    "buyMinReturnRatio": 1.5,
+    "reviewerEnabled": false,
+    "reviewerTimeoutMs": 60000,
+    "telegramTimeoutMs": 10000,
+    "raffleObservationLogDir": "./data/raffle-observations",
+    "raffleObservationWindowMs": 172800000,
+    "telegramFeedbackLogDir": "./data/telegram-feedback",
+    "telegramFeedbackPollTimeoutMs": 30000,
+    "telegramFeedbackRetryMs": 5000,
+    "siteHealthLogDir": "./data/site-health-reviews",
+    "siteHealthConsecutiveThreshold": 2,
+    "siteHealthReminderMs": 86400000,
+    "siteHealthMaxMessageLength": 3800,
+    "reviewerCacheTtlMs": 21600000,
+    "reviewerRejectCacheTtlMs": 300000,
+    "maxTrendSnapshots": 120,
+    "maxTrendAgeMs": 86400000,
+    "trendHeartbeatMs": 900000
+  },
+  "filters": {
+    "actionableWindowMs": 86400000,
+    "maxStoredCompetitionAgeMs": 21600000,
+    "maxEntryInventoryAgeMs": 120000,
+    "maxSpend": 100,
+    "minWinProbability": 0.6,
+    "minReturnRatio": 0.5
+  },
+  "valuation": {
+    "llmEnabled": false,
+    "llmTimeoutMs": 60000,
+    "llmMaxRafflesPerRequest": 8,
+    "llmCacheTtlMs": 2592000000,
+    "llmRetailHaircut": 0.8,
+    "llmMinValue": 25
+  },
+  "valueOpportunities": {
+    "enabled": true,
+    "maxSpend": 20,
+    "minWinProbability": 0.05,
+    "minReturnRatio": 0.5
+  }
+}
